@@ -1,0 +1,9 @@
+/* Huize Briers: kleuren uit de huisstijlgids */
+:root {
+  --hb-rust: #A8431D;   /* accent, links in het gradiënt */
+  --hb-amber: #E8912E;  /* highlights, rechts in het gradiënt */
+  --hb-ink: #1C1917;    /* tekst en donkere vlakken */
+  --hb-stone: #F3F1EE;  /* kaarten en panelen */
+  --hb-paper: #FFFFFF;  /* basisondergrond */
+  --hb-gradient: linear-gradient(135deg, #A8431D, #E8912E); /* alleen in het logo en op één vlak per drager */
+}

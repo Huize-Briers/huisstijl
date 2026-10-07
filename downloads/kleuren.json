@@ -1,0 +1,13 @@
+{
+  "naam": "Huize Briers",
+  "kleuren": [
+    { "naam": "Rust",  "hex": "#A8431D", "rol": "Accent, links in het gradiënt" },
+    { "naam": "Amber", "hex": "#E8912E", "rol": "Highlights, rechts in het gradiënt" },
+    { "naam": "Ink",   "hex": "#1C1917", "rol": "Tekst en donkere vlakken" },
+    { "naam": "Stone", "hex": "#F3F1EE", "rol": "Kaarten en panelen" },
+    { "naam": "Paper", "hex": "#FFFFFF", "rol": "Basisondergrond" }
+  ],
+  "gradient": "linear-gradient(135deg, #A8431D, #E8912E)",
+  "verhouding": "70 paper, 20 stone, 7 ink, 3 accent",
+  "lettertypes": { "display": "Bodoni Moda italic 700", "tekst": "Instrument Sans" }
+}

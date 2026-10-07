@@ -13,6 +13,7 @@ Eén bron voor iedereen die een post maakt, en voor elke AI die daarbij helpt.
 | `logo/` | De officiële logobestanden uit de huisstijlgids. |
 | `voorbeelden/` | Echte posts, goed en fout, met uitleg. |
 | `logo/png/` | Dezelfde logo's als PNG met transparante achtergrond. |
+| `downloads/` | Kleuren (CSS en JSON) en `Huize-Briers-huisstijl.zip` met alles. Maak de zip opnieuw met `python3 tools/maak-zip.py` na elke wijziging aan logo's, kleuren of regels. |
 | `sjablonen/` | De vaste layouts voor feed en story (nog te maken). |
 
 ## Lokaal bekijken

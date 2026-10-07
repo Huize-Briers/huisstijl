@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Huize Briers: zo maken we een post</title>
+<link rel="icon" href="logo/Huize-Briers-icoon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,500;1,700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #FFFFFF;
+    --stone: #F3F1EE;
+    --ink: #1C1917;
+    --ink-soft: #57534E;
+    --rust: #A8431D;
+    --amber: #E8912E;
+    --line: #E2DED8;
+    --display: "Bodoni Moda", "Bodoni 72", Didot, Georgia, serif;
+    --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 400 16px/1.6 var(--sans); }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--rust); outline-offset: 3px; }
+
+  .bar { position: sticky; top: 0; z-index: 5; background: var(--paper); border-bottom: 1px solid var(--line); }
+  .bar-in { max-width: 1040px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; gap: 28px; }
+  .bar img { width: 150px; }
+  .bar nav { display: flex; gap: 22px; margin-left: auto; overflow-x: auto; }
+  .bar nav a { text-decoration: none; font-weight: 500; font-size: 15px; white-space: nowrap; color: var(--ink-soft); }
+  .bar nav a:hover { color: var(--ink); }
+
+  main { max-width: 1040px; margin: 0 auto; padding: 0 24px 96px; }
+  section { padding-top: 72px; }
+  h1 { font: italic 700 clamp(44px, 7vw, 72px)/1.05 var(--display); letter-spacing: -.01em; margin: 72px 0 20px; }
+  h2 { font: 700 28px/1.2 var(--sans); letter-spacing: -.02em; margin: 0 0 12px; }
+  h3 { font: 600 17px/1.3 var(--sans); margin: 0 0 6px; }
+  p { margin: 0 0 14px; max-width: 60ch; }
+  .lead { font-size: 18px; color: var(--ink-soft); }
+
+  /* stappen */
+  .steps { list-style: none; margin: 36px 0 0; padding: 0; display: grid; gap: 0; counter-reset: s; }
+  .steps > li { counter-increment: s; display: grid; grid-template-columns: 56px 1fr; padding: 28px 0; border-top: 1px solid var(--line); }
+  .steps > li::before { content: counter(s); font: italic 500 34px/1 var(--display); color: var(--rust); }
+  .steps p:last-child { margin-bottom: 0; }
+
+  .copybox { background: var(--stone); padding: 18px 20px; margin: 14px 0 12px; max-width: 720px; }
+  .copybox pre { margin: 0; white-space: pre-wrap; word-break: break-word; font: 400 15px/1.55 var(--sans); }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  button, .btn { font: 600 15px/1 var(--sans); padding: 12px 18px; border: 1px solid var(--ink); background: var(--ink); color: var(--paper); cursor: pointer; text-decoration: none; display: inline-block; }
+  button.ghost, .btn.ghost { background: transparent; color: var(--ink); }
+  button:hover, .btn:hover { background: var(--rust); border-color: var(--rust); color: var(--paper); }
+  .note { font-size: 14px; color: var(--ink-soft); margin-top: 10px; }
+
+  /* logo's */
+  .logos { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; margin-top: 24px; }
+  .logo { border: 1px solid var(--line); display: flex; flex-direction: column; }
+  .logo .stage { height: 170px; display: flex; align-items: center; justify-content: center; padding: 28px; background: var(--stone); }
+  .logo .stage.dark { background: var(--ink); }
+  .logo .stage img { max-height: 100%; width: auto; max-width: 100%; }
+  .logo .meta { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+  .logo .meta span { font-size: 14px; color: var(--ink-soft); flex: 1; }
+  .logo .meta a { font-weight: 600; font-size: 14px; margin-top: 8px; }
+
+  /* voorbeelden */
+  .examples { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 28px 20px; margin-top: 24px; }
+  .ex figure { margin: 0 0 12px; background: var(--stone); aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; }
+  .ex figure img { max-height: 100%; width: auto; }
+  .verdict { font-weight: 700; }
+  .verdict.bad { color: var(--rust); }
+  .ex ul { margin: 6px 0 0; padding-left: 18px; font-size: 15px; }
+  .ex li { margin-bottom: 4px; }
+
+  /* regels (uit regels.md) */
+  #regels-tekst { max-width: 720px; margin-top: 8px; }
+  #regels-tekst h1 { display: none; }
+  #regels-tekst h2 { font-size: 19px; letter-spacing: -.01em; margin: 34px 0 8px; padding-top: 22px; border-top: 1px solid var(--line); }
+  #regels-tekst ul, #regels-tekst ol { padding-left: 20px; margin: 0 0 14px; }
+  #regels-tekst li { margin-bottom: 5px; }
+  #regels-tekst table { border-collapse: collapse; width: 100%; font-size: 15px; margin: 8px 0 14px; display: block; overflow-x: auto; }
+  #regels-tekst th, #regels-tekst td { text-align: left; padding: 9px 14px 9px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+  #regels-tekst pre { white-space: pre-wrap; font: inherit; }
+
+  footer { border-top: 1px solid var(--line); margin-top: 72px; padding-top: 20px; font-size: 14px; color: var(--ink-soft); }
+
+  @media (max-width: 640px) {
+    .bar nav { display: none; }
+    .steps > li { grid-template-columns: 40px 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-in">
+    <img src="logo/Huize-Briers-logo-volledig.svg" alt="Huize Briers">
+    <nav aria-label="Op deze pagina">
+      <a href="#stappen">Stappen</a>
+      <a href="#voorbeelden">Voorbeelden</a>
+      <a href="#logo">Logo's</a>
+      <a href="#regels">Alle regels</a>
+      <a href="huisstijlgids.html">Huisstijlgids</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <h1>Zo maken we een post</h1>
+  <p class="lead">Elke post van Huize Briers volgt dezelfde regels, wie hem ook maakt en met welke AI. Volg de vier stappen hieronder.</p>
+
+  <section id="stappen" style="padding-top:0">
+    <ol class="steps">
+      <li>
+        <div>
+          <h3>Geef de regels aan je AI</h3>
+          <p>Kopieer de startzin en plak hem als eerste bericht in ChatGPT, Claude, Gemini of Copilot.</p>
+          <div class="copybox"><pre id="startzin"></pre></div>
+          <div class="actions">
+            <button type="button" data-copy="startzin">Kopieer de startzin</button>
+            <button type="button" class="ghost" data-copy="regels">Kopieer de volledige regels</button>
+          </div>
+          <p class="note">Kan je AI geen links openen? Gebruik dan de tweede knop en plak de volledige regels.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Zeg wat je wil posten</h3>
+          <p>Geef het product, de datum en de winkel. Hoe concreter, hoe beter: wat zit erin, wie maakt het, vanaf wanneer ligt het er.</p>
+          <p>Je krijgt een kop, een praktische regel, een caption, een fotovoorstel en één tip terug.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Neem een echte foto</h3>
+          <p>Gebruik altijd een eigen foto van het echte product. Laat AI nooit een product, een persoon of de winkel verzinnen.</p>
+          <p>Zet de kop en de praktische regel in het vaste sjabloon. Het logo komt uit de bestanden hieronder en wordt nooit nagetypt.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Controleer voor je post</h3>
+          <p>Staat er één boodschap op, één keer gezegd? Kloppen de datum en de winkel? Zou je het zo aan de toonbank zeggen? Dan mag hij online.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="voorbeelden">
+    <h2>Voorbeelden</h2>
+    <p>Vier echte posts van ons. De eerste drie volgen de huisstijl niet, de vierde komt in de buurt.</p>
+    <div class="examples">
+      <div class="ex">
+        <figure><img src="voorbeelden/fout-1-worstenbroodjes-student.jpg" alt="Post met AI-gegenereerde student en stempels"></figure>
+        <div class="verdict bad">Niet zo</div>
+        <ul><li>Persoon en winkel zijn door AI verzonnen</li><li>Vijf lettertypes, stempel, borstelstreken</li><li>Logo nagemaakt in plaats van het echte bestand</li></ul>
+      </div>
+      <div class="ex">
+        <figure><img src="voorbeelden/fout-2-worstenbroodjes-iconen.jpg" alt="Post met AI-gegenereerde worstenbroodjes en iconen"></figure>
+        <div class="verdict bad">Niet zo</div>
+        <ul><li>De worstenbroodjes zijn niet de onze</li><li>"Authentieke smaak" staat er twee keer</li><li>Iconen, banner en een verzonnen logo</li></ul>
+      </div>
+      <div class="ex">
+        <figure><img src="voorbeelden/fout-3-terug-geopend.jpg" alt="Groene post over heropening"></figure>
+        <div class="verdict bad">Niet zo</div>
+        <ul><li>Groen zit niet in ons palet</li><li>Ander lettertype, logo getypt</li><li>Croissants en koffie door AI gemaakt</li></ul>
+      </div>
+      <div class="ex">
+        <figure><img src="voorbeelden/beter-4-worstenbroodjes-terug.jpg" alt="Post met echt logo en kop in Bodoni"></figure>
+        <div class="verdict">Bijna goed</div>
+        <ul><li>Echt logo, juiste lettertypes, één foto</li><li>Nog te verbeteren: de boodschap staat er drie keer</li><li>Nog te verbeteren: de kop bedekt het product</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="logo">
+    <h2>Logo's</h2>
+    <p>Gebruik alleen deze bestanden. Op een foto of een donker vlak neem je altijd een witte versie.</p>
+    <p>Vrije ruimte, kleuren, lettertypes en toepassingen staan in de volledige gids.</p>
+    <p><a class="btn ghost" href="huisstijlgids.html">Open de huisstijlgids</a></p>
+    <div class="logos">
+      <div class="logo"><div class="stage dark"><img src="logo/Huize-Briers-logo-gestapeld-wit.svg" alt=""></div><div class="meta"><h3>Gestapeld, wit</h3><span>Voor posts: op foto's en donkere vlakken.</span><a href="logo/Huize-Briers-logo-gestapeld-wit.svg" download>Download SVG</a></div></div>
+      <div class="logo"><div class="stage"><img src="logo/Huize-Briers-logo-gestapeld.svg" alt=""></div><div class="meta"><h3>Gestapeld</h3><span>Voor vierkante vlakken op een lichte achtergrond.</span><a href="logo/Huize-Briers-logo-gestapeld.svg" download>Download SVG</a></div></div>
+      <div class="logo"><div class="stage"><img src="logo/Huize-Briers-logo-volledig.svg" alt=""></div><div class="meta"><h3>Horizontaal</h3><span>Voor brede vlakken: headers, briefpapier, advertenties.</span><a href="logo/Huize-Briers-logo-volledig.svg" download>Download SVG</a></div></div>
+      <div class="logo"><div class="stage"><img src="logo/Huize-Briers-icoon.svg" alt=""></div><div class="meta"><h3>Icoon</h3><span>Alleen waar de naam er al staat.</span><a href="logo/Huize-Briers-icoon.svg" download>Download SVG</a></div></div>
+      <div class="logo"><div class="stage dark"><img src="logo/Huize-Briers-icoon-wit.svg" alt=""></div><div class="meta"><h3>Icoon, wit</h3><span>Op foto's en donkere vlakken.</span><a href="logo/Huize-Briers-icoon-wit.svg" download>Download SVG</a></div></div>
+    </div>
+  </section>
+
+  <section id="regels">
+    <h2>Alle regels</h2>
+    <p>Dit is de tekst die de AI leest. Ze staat in <a href="regels.md">regels.md</a>; pas je dat bestand aan, dan verandert deze pagina mee.</p>
+    <div id="regels-tekst"><p>De regels worden geladen.</p></div>
+  </section>
+
+  <footer>Huize Briers, regels voor sociale media. Vragen of een regel die niet werkt? Meld het aan wie deze pagina beheert.</footer>
+</main>
+
+<script>
+
+  // Kleine markdown-omzetter: koppen, lijsten, tabellen, vet, code en alinea's.
+  function toHtml(md) {
+    const esc = t => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const inline = t => esc(t).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/`(.+?)`/g, '<code>$1</code>');
+    const cellen = r => r.trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim());
+    const uit = []; let lijst = null;
+    const sluit = () => { if (lijst) { uit.push('</' + lijst + '>'); lijst = null; } };
+    const regels = md.split('\n');
+    for (let i = 0; i < regels.length; i++) {
+      const r = regels[i]; let m;
+      if ((m = r.match(/^(#{1,3})\s+(.*)$/))) { sluit(); uit.push('<h' + m[1].length + '>' + inline(m[2]) + '</h' + m[1].length + '>'); }
+      else if (/^\|/.test(r) && /^\|[\s:|-]+\|$/.test((regels[i + 1] || '').trim())) {
+        sluit(); let h = '<table><thead><tr>' + cellen(r).map(c => '<th>' + inline(c) + '</th>').join('') + '</tr></thead><tbody>';
+        i += 2; while (i < regels.length && /^\|/.test(regels[i])) { h += '<tr>' + cellen(regels[i]).map(c => '<td>' + inline(c) + '</td>').join('') + '</tr>'; i++; }
+        i--; uit.push(h + '</tbody></table>');
+      }
+      else if ((m = r.match(/^\s*(-|\d+\.)\s+(.*)$/))) { const soort = m[1] === '-' ? 'ul' : 'ol'; if (lijst !== soort) { sluit(); uit.push('<' + soort + '>'); lijst = soort; } uit.push('<li>' + inline(m[2]) + '</li>'); }
+      else if (r.trim() === '') sluit();
+      else { sluit(); uit.push('<p>' + inline(r) + '</p>'); }
+    }
+    sluit(); return uit.join('\n');
+  }
+
+  const regelsUrl = new URL('regels.md', location.href).href;
+  const startzin = 'Lees eerst de regels op ' + regelsUrl + ' en volg ze strikt.\n\nIk wil een post voor [Instagram of Facebook] over: [product of nieuws, datum, winkel].';
+  document.getElementById('startzin').textContent = startzin;
+  const teksten = { startzin: startzin, regels: '' };
+
+  fetch('regels.md')
+    .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(md => {
+      teksten.regels = md + '\n\nIk wil een post voor [Instagram of Facebook] over: [product of nieuws, datum, winkel].';
+      const doel = document.getElementById('regels-tekst');
+      doel.innerHTML = toHtml(md);
+    })
+    .catch(() => {
+      document.getElementById('regels-tekst').innerHTML =
+        '<p>De regels konden niet geladen worden. Open deze pagina via een lokale server (in IntelliJ: rechtsklik op index.html en kies "Open in Browser"; in VS Code: de extensie Live Server) of via de online link.</p>';
+    });
+
+  document.querySelectorAll('button[data-copy]').forEach(knop => {
+    const label = knop.textContent;
+    knop.addEventListener('click', async () => {
+      const tekst = teksten[knop.dataset.copy];
+      if (!tekst) { knop.textContent = 'Regels nog niet geladen'; setTimeout(() => knop.textContent = label, 1800); return; }
+      try { await navigator.clipboard.writeText(tekst); }
+      catch { const t = document.createElement('textarea'); t.value = tekst; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); }
+      knop.textContent = 'Gekopieerd';
+      setTimeout(() => knop.textContent = label, 1800);
+    });
+  });
+</script>
+</body>
+</html>

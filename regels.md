@@ -49,7 +49,7 @@ Goed:
 
 ## 4. Beeld (voor wie het sjabloon invult)
 
-De volledige huisstijl (logo, vrije ruimte, kleur, typografie) staat in `huisstijl.md` in dezelfde map. Hieronder staat wat voor een post geldt. Het vaste sjabloon staat in `sjablonen/post-maker.html`: de medewerker kiest een foto, vult kop en praktische regel in en downloadt het beeld.
+De volledige huisstijl (logo, vrije ruimte, kleur, typografie) staat in `huisstijl.md` in dezelfde map. Hieronder staat wat voor een post geldt.
 
 - Formaat: 1080 × 1350 voor de feed, 1080 × 1920 voor stories. Nooit balken links of rechts.
 - Eén echte foto, beeldvullend, volgens het fotoprotocol.
@@ -57,6 +57,11 @@ De volledige huisstijl (logo, vrije ruimte, kleur, typografie) staat in `huissti
 - Kop: Bodoni Moda italic 700, hoogstens 6 woorden, één keer per beeld.
 - Alle andere tekst: Instrument Sans. Geen derde lettertype.
 - Winkel of plaats: Bodoni Moda italic 500, klein, onderaan.
+- Marge: minstens 72 px rondom. Logo en tekst staan nooit dichter bij de rand.
+- Story: laat 250 px bovenaan en 340 px onderaan vrij van tekst en logo, want daar staat de interface van Instagram.
+- Logo: gestapeld, wit, hoogstens 250 px breed, in de hoek tegenover de tekst.
+- Maten: kop 60 tot 112 px, hoogstens 3 regels. Praktische regel Instrument Sans 500, 40 px. Plaats 32 px.
+- Is de foto te druk voor witte tekst, leg dan een donker verloop in ink achter de tekst. Geen ander kleurvlak.
 - Logo op een foto of donker vlak: altijd logo-gestapeld-wit. Nooit het gradiëntlogo op een foto.
 - Kleuren: paper #FFFFFF, stone #F3F1EE, ink #1C1917, rust #A8431D, amber #E8912E. Geen andere kleuren. Rust en amber zijn accent, hoogstens één accentvlak per beeld.
 - Geen versiering: geen stempels, borstelstreken, sterren, iconen, blaadjes, hartjes, korenaren of kaders.

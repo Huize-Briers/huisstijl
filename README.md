@@ -13,7 +13,7 @@ Eén bron voor iedereen die een post maakt, en voor elke AI die daarbij helpt.
 | `logo/` | De officiële logobestanden uit de huisstijlgids. |
 | `voorbeelden/` | Echte posts, goed en fout, met uitleg. |
 | `logo/png/` | Dezelfde logo's als PNG met transparante achtergrond. |
-| `sjablonen/` | `post-maker.html`: het sjabloon voor feed en story, met controle op de regels. |
+| `sjablonen/` | De vaste layouts voor feed en story (nog te maken). |
 
 ## Lokaal bekijken
 
@@ -28,7 +28,6 @@ De pagina laadt `regels.md` met `fetch`, dus dubbelklikken op `index.html` werkt
 De site staat op https://huize-briers.github.io/huisstijl/ en wordt bijgewerkt bij elke push naar `main` (GitHub Pages, branch `main`, map `/`).
 
 - Pagina voor medewerkers: https://huize-briers.github.io/huisstijl/
-- Sjabloon: https://huize-briers.github.io/huisstijl/sjablonen/post-maker.html
 - Regels voor AI: https://huize-briers.github.io/huisstijl/regels.md
 
 De startzin op de pagina gebruikt automatisch het juiste adres.
@@ -41,5 +40,4 @@ De startzin op de pagina gebruikt automatisch het juiste adres.
 
 ## Nog te doen
 
-- Een voorbeeld van een post die volledig klopt: maak er een met het sjabloon en een echte foto, en voeg hem toe aan `voorbeelden/` en `index.html`.
-- De lijst verboden woorden staat zowel in `regels.md` als in `sjablonen/post-maker.html`. Houd ze gelijk.
+- Een voorbeeld van een post die volledig klopt: maak er een met een echte foto, en voeg hem toe aan `voorbeelden/` en `index.html`.

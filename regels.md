@@ -161,7 +161,7 @@ Begin direct met **Kop**. Geen inleiding, geen afsluiting en geen uitleg over je
 
 - Zet nooit haakjes of plaatshouders in de kop, de praktische regel of de caption. Laat een ontbrekend feit weg en schrijf eromheen.
 - Verzin geen datum, prijs, bedrag, plaats, kanaal, actie ("koop hem in de bistro") of naam. Zeg "de bistro" of "Huize Briers", niet "Bistro Briers". Hashtags zijn lokale woorden of #huizebriers, geen verzonnen namen.
-- **Bij twijfel schrijf je de post.** Stel alleen een vraag in plaats van een post in deze drie gevallen: (1) een opening, heropening of sluiting zonder datum, (2) een nieuw product zonder naam, (3) een evenement zonder datum. Schrijf dan alleen **Eerst nodig:** met die ene vraag. In alle andere gevallen schrijf je de post, ook als bedrag, prijs, plaats of datum ontbreken.
+- **Bij twijfel schrijf je de post.** Stel alleen een vraag in plaats van een post in deze drie gevallen: (1) een opening, heropening of sluiting zonder datum, (2) een nieuw product zonder naam, (3) een evenement zonder datum. Schrijf dan alleen **Eerst nodig:** met hoogstens drie korte vragen, de belangrijkste eerst, en nog geen post. In alle andere gevallen schrijf je de post, ook als bedrag, prijs, plaats of datum ontbreken.
 - Producten die altijd te koop zijn (een cadeaubon, een vast gerecht, de high tea, een vast product) zijn geen tijdelijke actie. Vraag er niet naar start- of einddatum.
 - Alles wat de post alleen sterker maakt, zet je onder **Zo wordt hij sterker**.
 

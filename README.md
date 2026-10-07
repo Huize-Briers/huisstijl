@@ -12,7 +12,8 @@ Eén bron voor iedereen die een post maakt, en voor elke AI die daarbij helpt.
 | `huisstijl.md` | Dezelfde gids als tekst, voor AI. Pas je de gids aan, werk dan ook dit bestand bij. |
 | `logo/` | De officiële logobestanden uit de huisstijlgids. |
 | `voorbeelden/` | Echte posts, goed en fout, met uitleg. |
-| `sjablonen/` | De vaste layouts voor feed en story (nog te maken). |
+| `logo/png/` | Dezelfde logo's als PNG met transparante achtergrond. |
+| `sjablonen/` | `post-maker.html`: het sjabloon voor feed en story, met controle op de regels. |
 
 ## Lokaal bekijken
 
@@ -22,21 +23,13 @@ De pagina laadt `regels.md` met `fetch`, dus dubbelklikken op `index.html` werkt
 - VS Code: installeer de extensie Live Server, rechtsklik op `index.html`, dan "Open with Live Server".
 - Of in een terminal: `python3 -m http.server` en ga naar http://localhost:8000
 
-## Online zetten met GitHub Pages
+## Online
 
-1. Maak op GitHub een nieuwe publieke repository, bijvoorbeeld `huisstijl`.
-2. In deze map:
-   ```
-   git init
-   git add .
-   git commit -m "Eerste versie"
-   git branch -M main
-   git remote add origin https://github.com/<gebruiker>/huisstijl.git
-   git push -u origin main
-   ```
-3. Op GitHub: Settings, Pages, kies bij "Branch" `main` en map `/ (root)`, en bewaar.
-4. Na een minuut staat de pagina op `https://<gebruiker>.github.io/huisstijl/`.
-   De regels voor AI staan dan op `https://<gebruiker>.github.io/huisstijl/regels.md`.
+De site staat op https://huize-briers.github.io/huisstijl/ en wordt bijgewerkt bij elke push naar `main` (GitHub Pages, branch `main`, map `/`).
+
+- Pagina voor medewerkers: https://huize-briers.github.io/huisstijl/
+- Sjabloon: https://huize-briers.github.io/huisstijl/sjablonen/post-maker.html
+- Regels voor AI: https://huize-briers.github.io/huisstijl/regels.md
 
 De startzin op de pagina gebruikt automatisch het juiste adres.
 
@@ -48,6 +41,5 @@ De startzin op de pagina gebruikt automatisch het juiste adres.
 
 ## Nog te doen
 
-- `Huize-Briers-logo-volledig-wit.svg` en de PNG-versies toevoegen (zaten niet in de export van de gids).
-- Sjablonen voor feed (1080 × 1350) en story (1080 × 1920).
-- Een voorbeeld van een post die volledig klopt.
+- Een voorbeeld van een post die volledig klopt: maak er een met het sjabloon en een echte foto, en voeg hem toe aan `voorbeelden/` en `index.html`.
+- De lijst verboden woorden staat zowel in `regels.md` als in `sjablonen/post-maker.html`. Houd ze gelijk.

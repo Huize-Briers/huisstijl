@@ -4,6 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Huize Briers: zo maken we een post</title>
+<meta name="description" content="Regels, logo's en sjabloon voor posts van Huize Briers op sociale media.">
+<meta property="og:title" content="Huize Briers: zo maken we een post">
+<meta property="og:description" content="Regels, logo's en sjabloon voor posts van Huize Briers op sociale media.">
+<meta property="og:type" content="website">
 <link rel="icon" href="logo/Huize-Briers-icoon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,9 +66,9 @@
   .logo .stage { height: 170px; display: flex; align-items: center; justify-content: center; padding: 28px; background: var(--stone); }
   .logo .stage.dark { background: var(--ink); }
   .logo .stage img { max-height: 100%; width: auto; max-width: 100%; }
-  .logo .meta { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
-  .logo .meta span { font-size: 14px; color: var(--ink-soft); flex: 1; }
-  .logo .meta a { font-weight: 600; font-size: 14px; margin-top: 8px; }
+  .logo .meta { padding: 14px 16px 16px; flex: 1; }
+  .logo .meta span { display: block; font-size: 14px; color: var(--ink-soft); margin-bottom: 10px; }
+  .logo .meta a { font-weight: 600; font-size: 14px; margin-right: 14px; }
 
   /* voorbeelden */
   .examples { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 28px 20px; margin-top: 24px; }
@@ -101,6 +105,7 @@
     <img src="logo/Huize-Briers-logo-volledig.svg" alt="Huize Briers">
     <nav aria-label="Op deze pagina">
       <a href="#stappen">Stappen</a>
+      <a href="#sjabloon">Sjabloon</a>
       <a href="#voorbeelden">Voorbeelden</a>
       <a href="#logo">Logo's</a>
       <a href="#regels">Alle regels</a>
@@ -138,7 +143,8 @@
         <div>
           <h3>Neem een echte foto</h3>
           <p>Gebruik altijd een eigen foto van het echte product. Laat AI nooit een product, een persoon of de winkel verzinnen.</p>
-          <p>Zet de kop en de praktische regel in het vaste sjabloon. Het logo komt uit de bestanden hieronder en wordt nooit nagetypt.</p>
+          <p>Zet de foto, de kop en de praktische regel in het vaste sjabloon. Het logo zit erin en wordt nooit nagetypt.</p>
+          <p><a class="btn" href="sjablonen/post-maker.html">Open het sjabloon</a></p>
         </div>
       </li>
       <li>
@@ -150,9 +156,15 @@
     </ol>
   </section>
 
+  <section id="sjabloon">
+    <h2>Sjabloon</h2>
+    <p>Kies je eigen foto, typ de kop en de praktische regel, en download het beeld als PNG voor feed (1080 × 1350) of story (1080 × 1920). Logo, lettertypes, kleuren en marges staan vast, en een controle waarschuwt als een tekst de regels breekt.</p>
+    <p><a class="btn" href="sjablonen/post-maker.html">Open het sjabloon</a></p>
+  </section>
+
   <section id="voorbeelden">
     <h2>Voorbeelden</h2>
-    <p>Vier echte posts van ons. De eerste drie volgen de huisstijl niet, de vierde komt in de buurt.</p>
+    <p>Vier echte posts van ons. De eerste drie volgen de huisstijl niet, de vierde komt in de buurt. Een voorbeeld dat volledig klopt komt erbij zodra er een echte foto is gemaakt met het sjabloon.</p>
     <div class="examples">
       <div class="ex">
         <figure><img src="voorbeelden/fout-1-worstenbroodjes-student.jpg" alt="Post met AI-gegenereerde student en stempels"></figure>
@@ -183,11 +195,12 @@
     <p>Vrije ruimte, kleuren, lettertypes en toepassingen staan in de volledige gids.</p>
     <p><a class="btn ghost" href="huisstijlgids.html">Open de huisstijlgids</a></p>
     <div class="logos">
-      <div class="logo"><div class="stage dark"><img src="logo/Huize-Briers-logo-gestapeld-wit.svg" alt=""></div><div class="meta"><h3>Gestapeld, wit</h3><span>Voor posts: op foto's en donkere vlakken.</span><a href="logo/Huize-Briers-logo-gestapeld-wit.svg" download>Download SVG</a></div></div>
-      <div class="logo"><div class="stage"><img src="logo/Huize-Briers-logo-gestapeld.svg" alt=""></div><div class="meta"><h3>Gestapeld</h3><span>Voor vierkante vlakken op een lichte achtergrond.</span><a href="logo/Huize-Briers-logo-gestapeld.svg" download>Download SVG</a></div></div>
-      <div class="logo"><div class="stage"><img src="logo/Huize-Briers-logo-volledig.svg" alt=""></div><div class="meta"><h3>Horizontaal</h3><span>Voor brede vlakken: headers, briefpapier, advertenties.</span><a href="logo/Huize-Briers-logo-volledig.svg" download>Download SVG</a></div></div>
-      <div class="logo"><div class="stage"><img src="logo/Huize-Briers-icoon.svg" alt=""></div><div class="meta"><h3>Icoon</h3><span>Alleen waar de naam er al staat.</span><a href="logo/Huize-Briers-icoon.svg" download>Download SVG</a></div></div>
-      <div class="logo"><div class="stage dark"><img src="logo/Huize-Briers-icoon-wit.svg" alt=""></div><div class="meta"><h3>Icoon, wit</h3><span>Op foto's en donkere vlakken.</span><a href="logo/Huize-Briers-icoon-wit.svg" download>Download SVG</a></div></div>
+      <div class="logo"><div class="stage dark"><img src="logo/Huize-Briers-logo-gestapeld-wit.svg" alt=""></div><div class="meta"><h3>Gestapeld, wit</h3><span>Voor posts: op foto's en donkere vlakken.</span><a href="logo/Huize-Briers-logo-gestapeld-wit.svg" download>SVG</a> <a href="logo/png/Huize-Briers-logo-gestapeld-wit.png" download>PNG</a></div></div>
+      <div class="logo"><div class="stage"><img src="logo/Huize-Briers-logo-gestapeld.svg" alt=""></div><div class="meta"><h3>Gestapeld</h3><span>Voor vierkante vlakken op een lichte achtergrond.</span><a href="logo/Huize-Briers-logo-gestapeld.svg" download>SVG</a> <a href="logo/png/Huize-Briers-logo-gestapeld.png" download>PNG</a></div></div>
+      <div class="logo"><div class="stage"><img src="logo/Huize-Briers-logo-volledig.svg" alt=""></div><div class="meta"><h3>Horizontaal</h3><span>Voor brede vlakken: headers, briefpapier, advertenties.</span><a href="logo/Huize-Briers-logo-volledig.svg" download>SVG</a> <a href="logo/png/Huize-Briers-logo-volledig.png" download>PNG</a></div></div>
+      <div class="logo"><div class="stage"><img src="logo/Huize-Briers-icoon.svg" alt=""></div><div class="meta"><h3>Icoon</h3><span>Alleen waar de naam er al staat.</span><a href="logo/Huize-Briers-icoon.svg" download>SVG</a> <a href="logo/png/Huize-Briers-icoon.png" download>PNG</a></div></div>
+      <div class="logo"><div class="stage dark"><img src="logo/Huize-Briers-logo-volledig-wit.svg" alt=""></div><div class="meta"><h3>Horizontaal, wit</h3><span>Op foto's, donkere vlakken en amber.</span><a href="logo/Huize-Briers-logo-volledig-wit.svg" download>SVG</a> <a href="logo/png/Huize-Briers-logo-volledig-wit.png" download>PNG</a></div></div>
+      <div class="logo"><div class="stage dark"><img src="logo/Huize-Briers-icoon-wit.svg" alt=""></div><div class="meta"><h3>Icoon, wit</h3><span>Op foto's en donkere vlakken.</span><a href="logo/Huize-Briers-icoon-wit.svg" download>SVG</a> <a href="logo/png/Huize-Briers-icoon-wit.png" download>PNG</a></div></div>
     </div>
   </section>
 

@@ -66,16 +66,33 @@ Bodoni Moda italic spreekt, Instrument Sans doet al het werk. Twee letters, geen
 - In een cirkel staat het gestapelde logo optisch gecentreerd, met minstens een halve icoonhoogte marge tot de rand. In een cirkel kleiner dan 30 mm: alleen het icoon.
 - Verder uitgewerkt in de gids: gevelbord, webheader en prijskaart.
 
-## 6. Drie takken, één naam
+## 6. Twee takken, één naam
 
-Bakkerij, bistro en B&B dragen hetzelfde logo. De tak staat eronder in Instrument Sans, gespatieerd en klein. Nooit als tweede logo of in een andere kleur.
+Bakkerij en B&B dragen hetzelfde logo. De tak staat eronder in Instrument Sans, gespatieerd en klein. Nooit als tweede logo of in een andere kleur. De bistro heeft een eigen merk: zie deel 7.
 
 - Bakkerij: brood en banketgebak uit natuurlijke streekproducten, met de recepten van 1966.
-- Bistro: woensdag tot zondag, ontbijt, lunch, high tea, koffie met gebak en diner.
+- Bistro Briers: woensdag tot zondag, ontbijt, lunch, high tea, koffie met gebak en diner.
 - B&B: twee suites met viersterrencomfort in de gerestaureerde paardenstallen.
 
 Geschiedenis: gestart in 1966 in het Luikse, in 1971 naar Bilzen, in 1981 de ateliers in Munsterbilzen. Vandaag staat de tweede generatie aan het roer.
 
-## 7. Bestanden
+## 7. Bistro Briers
 
-SVG voor alles wat op scherm of in druk komt, PNG alleen waar SVG niet kan. De bestanden staan in `logo/`.
+Een eigen merk, los van Huize Briers: geen pretzel en geen verwijzing. Wel dezelfde hand: de penseelcirkel en de ronde Quicksand-letter blijven, in het amber en zwart van het huis.
+
+- De naam staat altijd op één regel, gecentreerd in de cirkel, nooit erbuiten. Lettertype Quicksand 400, ongeveer 11,5% van de breedte van de cirkel.
+- Cirkel en naam gebruik je altijd samen. De cirkel alleen is geen icoon.
+- Kleinst: 24 mm breed in druk, 96 px op scherm.
+
+| Variant | Bestand in `logo/bistro/` | Gebruik |
+|---|---|---|
+| Amber op wit | `Bistro-Briers-logo-amber.png` | Standaard, ook op stone (print op papier) |
+| Amber op zwart | `Bistro-Briers-logo-amber-witte-naam.png` | Avond, menu's |
+| Wit | `Bistro-Briers-logo-wit.png` | Op amber (vlakken, social), op zwart (gevel, glas), op foto's |
+| Zwart | `Bistro-Briers-logo-zwart.png` | Op wit (fax, stempel, één kleur) en op amber (affiches) |
+| Volledig amber | `Bistro-Briers-logo-amber-volledig.png` | Kleine toepassingen |
+| Cirkel zonder naam | `Bistro-Briers-cirkel-amber.png`, `-wit.png`, `-zwart.png` | Alleen voor wie de naam zelf in Quicksand zet |
+
+## 8. Bestanden
+
+SVG voor alles wat op scherm of in druk komt, PNG alleen waar SVG niet kan. De bestanden van Huize Briers staan in `logo/`, die van Bistro Briers in `logo/bistro/`.

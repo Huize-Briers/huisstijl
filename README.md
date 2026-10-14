@@ -8,11 +8,13 @@ Eén bron voor iedereen die een post maakt, en voor elke AI die daarbij helpt.
 |---|---|
 | `regels.md` | De regels die de AI leest. Dit is de bron: pas alleen dit bestand aan. |
 | `index.html` | De pagina voor medewerkers. Laadt `regels.md` automatisch in. |
-| `huisstijlgids.html` | De volledige huisstijlgids uit Claude Design, voor mensen. |
+| `huisstijlgids.html` | De volledige huisstijlgids uit Claude Design, voor mensen. Laadt `support.js` en React via het internet. |
+| `support.js` | Hoort bij `huisstijlgids.html`. Niet verwijderen. |
 | `huisstijl.md` | Dezelfde gids als tekst, voor AI. Pas je de gids aan, werk dan ook dit bestand bij. |
 | `logo/` | De officiële logobestanden uit de huisstijlgids. |
 | `voorbeelden/` | Echte posts, goed en fout, met uitleg. |
 | `logo/png/` | Dezelfde logo's als PNG met transparante achtergrond. |
+| `logo/bistro/` | Logo's van Bistro Briers (eigen merk): cirkel met naam in vier kleuren, plus de losse cirkels. |
 | `downloads/` | Kleuren (CSS en JSON) en `Huize-Briers-huisstijl.zip` met alles. Maak de zip opnieuw met `python3 tools/maak-zip.py` na elke wijziging aan logo's, kleuren of regels. |
 | `sjablonen/` | De vaste layouts voor feed en story (nog te maken). |
 

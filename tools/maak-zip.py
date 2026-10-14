@@ -5,7 +5,7 @@ import os, zipfile
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 out = os.path.join(root, "downloads", "Huize-Briers-huisstijl.zip")
 bestanden = []
-for map_ in ("logo", os.path.join("logo", "png")):
+for map_ in ("logo", os.path.join("logo", "png"), os.path.join("logo", "bistro")):
     for f in sorted(os.listdir(os.path.join(root, map_))):
         p = os.path.join(map_, f)
         if os.path.isfile(os.path.join(root, p)) and f.lower().endswith((".svg", ".png")):

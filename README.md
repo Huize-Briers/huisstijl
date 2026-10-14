@@ -17,6 +17,7 @@ Eén bron voor iedereen die een post maakt, en voor elke AI die daarbij helpt.
 | `logo/png/` | Dezelfde logo's als PNG met transparante achtergrond. |
 | `logo/bistro/` | Logo's van Bistro Briers (eigen merk): cirkel met naam in vier kleuren, plus de losse cirkels. |
 | `downloads/` | Kleuren (CSS en JSON) en `Huize-Briers-huisstijl.zip` met alles. Maak de zip opnieuw met `python3 tools/maak-zip.py` na elke wijziging aan logo's, kleuren of regels. |
+| `ai-pakket/` | Het script `maak-post.py` dat uit een echte foto en de tekst een afgewerkt beeld maakt, met de logo's en lettertypes. Als zip: `downloads/Huize-Briers-AI-pakket.zip`. |
 | `sjablonen/` | De vaste layouts voor feed en story (nog te maken). |
 
 ## Lokaal bekijken

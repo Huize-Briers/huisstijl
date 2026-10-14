@@ -18,3 +18,17 @@ with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
     for p in bestanden:
         z.write(os.path.join(root, p), os.path.join("Huize-Briers-huisstijl", p))
 print(len(bestanden), "bestanden in", out)
+
+# Het AI-pakket: script, logo's, lettertypes en de regels als tekst, om aan een AI-project te geven.
+pakket = os.path.join(root, "downloads", "Huize-Briers-AI-pakket.zip")
+ai = os.path.join(root, "ai-pakket")
+with zipfile.ZipFile(pakket, "w", zipfile.ZIP_DEFLATED) as z:
+    for dirpath, _, files in os.walk(ai):
+        for f in sorted(files):
+            if f.startswith(".") or f == "__pycache__":
+                continue
+            p = os.path.join(dirpath, f)
+            z.write(p, os.path.join("Huize-Briers-AI-pakket", os.path.relpath(p, ai)))
+    for naam in ("regels.txt", "huisstijl.txt"):
+        z.write(os.path.join(root, naam), os.path.join("Huize-Briers-AI-pakket", naam))
+print("AI-pakket:", pakket)

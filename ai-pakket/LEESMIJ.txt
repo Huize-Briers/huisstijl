@@ -1,0 +1,26 @@
+HUIZE BRIERS: AI-PAKKET VOOR POSTS
+
+Wat zit erin
+- maak-post.py       Maakt uit een echte foto en de tekst een afgewerkt beeld (feed, story of vierkant).
+- logo/              De officiële logo's (Huize Briers en Bistro Briers), als PNG met transparante achtergrond.
+- lettertypes/       Bodoni Moda en Instrument Sans (vrij te gebruiken, licentie erbij).
+- regels.txt         De regels voor teksten en beelden.
+- huisstijl.txt      De volledige huisstijl als tekst.
+
+Eénmalig instellen
+ChatGPT:  maak een Project, zet bij "Bestanden" alles uit dit pakket erin en zet de regels bij de instructies:
+          "Lees regels.txt en volg ze strikt. Maak het beeld met maak-post.py."
+          Zorg dat "Gegevensanalyse" (Python) aanstaat.
+Claude:   maak een Project en voeg alle bestanden toe aan de projectkennis. Claude moet code kunnen uitvoeren.
+
+Elke post
+1. Stuur je echte foto mee en zeg wat je wil posten: product, datum en winkel.
+2. De AI schrijft de tekst volgens de regels en maakt het beeld met maak-post.py.
+3. Controleer de datum en de winkel, en zet het beeld online.
+
+Zonder Python kan een AI de tekst schrijven, maar geen afgewerkt beeld maken. Dan staat het beeld op te maken
+met dit script op een computer met Python 3 en het pakket Pillow (pip install pillow):
+
+  python3 maak-post.py foto.jpg --kop "De worstenbroodjes zijn terug" --regel "Vanaf donderdag 8 oktober in Bilzen en Munsterbilzen" --plaats "Bilzen · Munsterbilzen" --label "Terug in de winkel"
+
+Opties: --merk bistro, --formaat story, --tekst boven, --verbeter (alleen belichting, contrast en scherpte), --focus-x en --focus-y (welk deel van de foto blijft staan).

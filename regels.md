@@ -86,7 +86,7 @@ Goed (alleen de opbouw: zo kort en concreet, met alleen feiten die de medewerker
 
 ## 4. Beeld (voor wie het sjabloon invult)
 
-De volledige huisstijl (logo, vrije ruimte, kleur, typografie) staat in `huisstijl.md` in dezelfde map. Hieronder staat wat voor een post geldt.
+De volledige huisstijl (logo, vrije ruimte, kleur, typografie) staat in `huisstijl.txt` (of `huisstijl.md`) naast dit bestand, op https://huize-briers.github.io/huisstijl/huisstijl.txt. Hieronder staat wat voor een post geldt.
 
 - Formaat: 1080 × 1350 voor de feed, 1080 × 1920 voor stories. Nooit balken links of rechts.
 - Eén echte foto van het echte product, beeldvullend. Geen collage. Het product is herkenbaar en scherp, in daglicht of goed licht, zonder stijlfilter.

@@ -1,8 +1,11 @@
-"""Maakt downloads/Huize-Briers-huisstijl.zip opnieuw. Draai dit na elke wijziging in logo's, kleuren of regels:
+"""Maakt downloads/Huize-Briers-huisstijl.zip opnieuw en synchroniseert regels.txt en huisstijl.txt met de .md-bestanden. Draai dit na elke wijziging in logo's, kleuren of regels:
     python3 tools/maak-zip.py
 """
-import os, zipfile
+import os, shutil, zipfile
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Sommige AI-tools (zoals ChatGPT) weigeren text/markdown. Daarom bieden we dezelfde tekst ook als .txt aan (text/plain).
+for naam in ("regels", "huisstijl"):
+    shutil.copyfile(os.path.join(root, naam + ".md"), os.path.join(root, naam + ".txt"))
 out = os.path.join(root, "downloads", "Huize-Briers-huisstijl.zip")
 bestanden = []
 for map_ in ("logo", os.path.join("logo", "png"), os.path.join("logo", "bistro")):

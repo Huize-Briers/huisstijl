@@ -203,7 +203,7 @@
 
   <section id="regels">
     <h2>Alle regels</h2>
-    <p>Dit is de tekst die de AI leest. Ze staat in <a href="regels.md">regels.md</a>; pas je dat bestand aan, dan verandert deze pagina mee.</p>
+    <p>Dit is de tekst die de AI leest. Ze staat in <a href="regels.md">regels.md</a> en als gewone tekst in <a href="regels.txt">regels.txt</a>, voor AI-tools die geen markdown lezen.</p>
     <div id="regels-tekst"><p>De regels worden geladen.</p></div>
   </section>
 
@@ -235,7 +235,7 @@
     sluit(); return uit.join('\n');
   }
 
-  const regelsUrl = new URL('regels.md', location.href).href;
+  const regelsUrl = new URL('regels.txt', location.href).href;
   const startzin = 'Lees eerst de regels op ' + regelsUrl + ' en volg ze strikt.\n\nIk wil een post voor [Instagram of Facebook] over: [product of nieuws, datum, winkel].';
   document.getElementById('startzin').textContent = startzin;
   const teksten = { startzin: startzin, regels: '' };

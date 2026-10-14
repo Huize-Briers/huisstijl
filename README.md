@@ -7,6 +7,7 @@ Eén bron voor iedereen die een post maakt, en voor elke AI die daarbij helpt.
 | Pad | Wat |
 |---|---|
 | `regels.md` | De regels die de AI leest. Dit is de bron: pas alleen dit bestand aan. |
+| `regels.txt`, `huisstijl.txt` | Kopie als gewone tekst, voor AI-tools die `text/markdown` weigeren (ChatGPT). Wordt aangemaakt door `python3 tools/maak-zip.py`. |
 | `index.html` | De pagina voor medewerkers. Laadt `regels.md` automatisch in. |
 | `huisstijlgids.html` | De volledige huisstijlgids uit Claude Design, voor mensen. Laadt `support.js` en React via het internet. |
 | `support.js` | Hoort bij `huisstijlgids.html`. Niet verwijderen. |
@@ -39,7 +40,8 @@ De startzin op de pagina gebruikt automatisch het juiste adres.
 
 1. Wijzig `regels.md`.
 2. Verhoog het versienummer in de titel.
-3. Commit en push. De pagina en elke AI die de link leest volgen meteen.
+3. Draai `python3 tools/maak-zip.py` (maakt `regels.txt` en de zip opnieuw).
+4. Commit en push. De pagina en elke AI die de link leest volgen meteen.
 
 ## Nog te doen
 
